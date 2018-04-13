@@ -8,7 +8,6 @@ import { YesNoComponent } from './yes-no/yes-no.component';
 
 import { YesOrNoService } from './yes-or-no.service';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @NgModule({
