@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class YesOrNoService {
 
   private yesnoUrl = 'https://yesno.wtf/api';
+  private chuckNorrisUrl = 'https://api.chucknorris.io/jokes/random';
 
   constructor(
     private http: HttpClient,
@@ -14,5 +15,9 @@ export class YesOrNoService {
 
   getData() {
     return this.http.get(this.yesnoUrl);
+  }
+
+  getChucksData() {
+    return this.http.get(this.chuckNorrisUrl);
   }
 }

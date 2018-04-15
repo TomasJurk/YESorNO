@@ -10,6 +10,7 @@ export class YesNoComponent implements OnInit {
 
   answer;
   background;
+  joke;
 
   constructor(
     private yesOrNoService: YesOrNoService
@@ -22,6 +23,13 @@ export class YesNoComponent implements OnInit {
     this.yesOrNoService.getData().subscribe(result => {
       this.answer = result;
       this.setBackground();
+    });
+  }
+
+  getChucksData() {
+    this.yesOrNoService.getChucksData().subscribe(result => {
+      this.joke = result; 
+      console.log(result);
     });
   }
 
